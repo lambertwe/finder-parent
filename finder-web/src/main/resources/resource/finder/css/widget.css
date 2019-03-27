@@ -1,0 +1,229 @@
+/* tab panel */
+div.tab-component{position: relative; width: 100%; height: 100%;}
+div.tab-label-wrap{padding-top: 4px; padding-left: 4px; height: 30px; background: #ffffff url(data:image/gif;base64,R0lGODlhAQAmAJEAAAAAAP///8zMzP///yH5BAEAAAMALAAAAAABACYAAAIGnI+pyyMFADs=) repeat-x scroll 0px -4px; overflow: hidden;}
+div.tab-label-wrap ul{margin: 0px; padding: 0px;}
+div.tab-label-wrap ul li.tab-label{
+    float: left;
+    margin: 0px 4px 0px 0px;
+    height: 28px;
+    line-height: 28px;
+    outline: medium none;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    border-radius: 4px 4px 0px 0px;
+    background-color: #f3f3f3;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 13px;
+    color: #444444;
+    cursor: default;
+    display: inline-block;
+}
+/* ff6a00 */
+div.tab-label-wrap ul li.tab-label:hover{background-color: #f8f8f8;}
+div.tab-label-wrap ul li.tab-active{border: 1px solid #dddddd; border-bottom: 1px solid #f8f8f8; background-color: #f8f8f8; color: #444444;}
+div.tab-label-wrap ul li.tab-active:hover{background-color: #fbfbfc; color: #444444;}
+
+div.tab-label-wrap ul li.tab-label span.icon{margin-left: 4px; width: 16px; height: 16px;}
+div.tab-label-wrap ul li.tab-label span.label{padding-left: 16px; padding-right: 16px;}
+div.tab-label-wrap ul li.tab-label span.close{
+    float: right;
+    margin-top: 7px;
+    margin-left: 0px;
+    margin-right: 4px;
+    width: 15px;
+    height: 15px;
+    background: transparent url(?action=res&path=/finder/images/tab-close.gif) no-repeat 0px 0px;
+}
+div.tab-label-wrap ul li.tab-label span.close:hover{background-position: -15px; 0px}
+div.tab-label-wrap span.add{margin-top: 4px; margin-left: 4px; display: inline-block; width: 18px; height: 18px; background: transparent url(?action=res&path=/finder/images/add.gif) no-repeat 0px 0px;}
+div.tab-label-wrap span.add:hover{background-position: -18px; 0px}
+div.tab-panel{position: absolute; top: 34px; left: 0px; bottom: 0px; width: 100%; overflow: hidden; display: none;}
+
+/* dialog */
+div.dialog{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0,140,255,0.46);
+    -webkit-box-shadow: 0px 0px 20px rgba(0,140,255,0.46);
+    -moz-box-shadow: 0px 0px 20px rgba(0,140,255,0.46);
+    display: none;
+}
+
+div.dialog div.title{
+    position: relative;
+    clear: both;
+    height: 30px;
+    background-color: #f8f8f8;
+    cursor: default;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;
+}
+div.dialog div.title span.icon{float: left; margin: 0px 4px; height: 30px; line-height: 30px; font-size: 0px; display: inline-block;}
+div.dialog div.title span.icon img{max-width: 18px; max-height: 18px; border: none; vertical-align: middle;}
+div.dialog div.title h4 {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+    color: #333333;
+}
+
+div.dialog div.title span.min {
+    position: absolute;
+    top: 0px;
+    right: 84px;
+    width: 40px;
+    height: 26px;
+    background: transparent url(?action=res&path=/finder/images/min.gif) no-repeat 14px 6px;
+    display: inline-block;
+}
+
+div.dialog div.title span.max {
+    position: absolute;
+    top: 0px;
+    right: 44px;
+    width: 40px;
+    height: 26px;
+    background: transparent url(?action=res&path=/finder/images/max.gif) no-repeat 14px 7px;
+    display: inline-block;
+}
+
+div.dialog div.title span.close {
+    position: absolute;
+    top: 0px;
+    right: 4px;
+    width: 40px;
+    height: 26px;
+    background: transparent url(?action=res&path=/finder/images/close.gif) no-repeat 14px 7px;
+    display: inline-block;
+}
+
+div.dialog div.title span.min:hover{background-color: #c21a3d; background-position: 14px -33px;}
+div.dialog div.title span.max:hover{background-color: #c21a3d; background-position: 14px -33px;}
+div.dialog div.title span.close:hover{background-color: #c21a3d; background-position: 14px -33px;}
+div.dialog div.title h4 a{color: #666666;}
+div.dialog div.title h4 span.label {font-size: 12px; font-weight: normal;}
+div.dialog div.title h4 span.label strong {font-weight: bold; color: #ff6a00;}
+div.dialog div.body{margin: 0px; padding: 0px; min-height: 200px; background-color: #ffffff;}
+div.dialog div.body20{padding: 20px; background-color: #ffffff;}
+div.dialog div.text p{line-height: 24px;}
+
+/** img-viewer */
+div.img-viewer{position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 100; display: none;}
+div.img-viewer div.title{height: 50px; background-color: rgba(0, 0, 0, 0.4);}
+div.img-viewer div.title h4{float: left; margin-left: 30px; width: 300px; height: 50px; line-height: 50px; font-size: 13px; color: #d8d8d8;}
+div.img-viewer div.title span.close{float: right; margin-top: 10px; margin-right: 10px; width: 31px; height: 31px; border-radius: 31px; background: transparent url(?action=res&path=/finder/images/close.gif) no-repeat 10px 9px; display: inline-block;}
+div.img-viewer div.title span.close:hover{background-color: #c21a3d; background-position: 10px -31px;}
+div.img-viewer div.img-box{width: 100%; auto; border: 0px solid #dddddd; line-height: 420px; text-align: center; font-size: 0px; overflow: hidden;}
+
+div.img-viewer div.img-loading{position: absolute; top: 20%; left: 50%; width: 48px; height: 48px; line-height: 48px; border-radius: 3px; background-color: rgba(0, 0, 0, 0.4); text-align: center; display: block;}
+div.img-viewer div.img-loading img{vertical-align: middle;}
+
+div.img-viewer div.prev-btn{position: absolute; top: 50%; left: 10px;  width: 30px; height: 30px; line-height: 32px; border-radius: 3px; background-color: rgba(0, 0, 0, 0.4); text-align: center; vertical-align: middle; cursor: default;}
+div.img-viewer div.next-btn{position: absolute; top: 50%; right: 10px; width: 30px; height: 30px; line-height: 32px; border-radius: 3px; background-color: rgba(0, 0, 0, 0.4); text-align: center; vertical-align: middle; cursor: default;}
+div.img-viewer div.prev-btn span{display: inline-block; width: 6px; height: 9px; background: transparent url(?action=res&path=/finder/images/pagebar.gif) no-repeat scroll 0px 0px;}
+div.img-viewer div.next-btn span{display: inline-block; width: 6px; height: 9px; background: transparent url(?action=res&path=/finder/images/pagebar.gif) no-repeat scroll -20px 0px;}
+div.img-viewer div.prev-btn:hover span{background-position: 0px -31px}
+div.img-viewer div.next-btn:hover span{background-position: -20px -31px}
+
+div.img-viewer div.img-info{position: absolute; left: 0px; bottom: 0px; width: 100%; height: 40px; line-height: 40px; background-color: rgba(0, 0, 0, 0.4); text-align: center; color: #d8d8d8;}
+div.img-viewer div.img-info a{margin: 10px 0px 10px 0px; text-align: center; text-decoration: none; color: #d8d8d8;}
+
+/* progress */
+div.progress{width: 100%; background-color: #ffffff; display: block;}
+div.progress div.text{width: 100%; padding-top: 6px; font-size: 6px; opacity: 0.5; filter: alpha(opacity=50); color: #000000;}
+div.progress div.text p{margin: 0px; padding: 0px 0px 0px 4px; line-height: 16px; font-size: 12px; color: #000000;}
+div.progress div.bar{height: 10px; border: 1px solid #cccccc; vertical-align: middle; overflow: hidden; zoom: 1;}
+div.progress div.bar, div.progress div.bar div.percent{box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -khtml-box-sizing: border-box;}
+div.progress div.bar div.percent{width: 0px; height: 8px; border: 1px solid #ffffff; background-color: #a5dd3d;}
+
+/* properties dialog */
+div.props-dialog{width: 480px;}
+div.props-dialog div.props-panel{padding: 20px}
+div.props-dialog div.props-panel div.cp-row{clear: both; line-height: 26px; font-size: 13px;}
+div.props-dialog div.props-panel div.cp-line{margin-bottom: 10px; height: 6px; border-bottom: 1px solid #a0a0a0;}
+div.props-dialog div.props-panel div.cp-row span.label{float: left; width: 80px; height: 26px; line-height: 26px; display: inline-block;}
+div.props-dialog div.props-panel div.cp-row span.field{}
+div.props-dialog div.props-panel div.cp-row img.file-icon{max-width: 24px; max-height: 24px; border: none; vertical-align: middle;}
+div.props-dialog div.props-panel div.cp-row input.file-name{padding-left: 4px; width: 352px; height: 22px; line-height: 22px; border: 1px solid #cccccc; border-radius: 3px; font-size: 13px;}
+/* properties dialog end */
+
+/** drag-frame1 */
+div.widget-draggable-mask{position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.01); z-index: 100; display: none;}
+div.widget-draggable-frame1{position: absolute; display: none; top: 0px; left: 0px; background-color: transparent; cursor: default; z-index: -1}
+div.widget-draggable-frame1 div.widget-draggable-body1{position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; border: 1px dashed #3399ff; background-color: rgba(14,137,230,0.1); cursor: default;}
+
+/** drag-frame2 */
+div.widget-draggable-frame2{position: absolute; display: none; width: 120px; height: 120px; line-height: 120px; border: 1px solid #d9f1fc; box-shadow: 0px 0px 20px rgba(0, 140, 255, 0.46); background-color: #eaf6fc; text-align: center; cursor: default; z-index: 10001;}
+div.widget-draggable-frame2 div.widget-bubble{position: absolute; top: -20px; right: -20px; width: 40px; height: 40px; line-height: 40px; text-align: center; border-radius: 40px; background-color: #ff0000; color: #ffffff;}
+div.widget-draggable-frame2 img{max-width: 80px; max-height: 80px; vertical-align: middle;}
+
+/** select-frame */
+.widget-selectable-frame{position: absolute; border: 1px solid #3399ff; background-color: rgba(168, 202, 236, 0.5); z-index: 300; display: none;}
+
+/** task */
+div.widget-task-bar{position: absolute; left: 0px; bottom: 0px; width: 100%; height: 40px; background-color: transparent; color: #d8d8d8; -moz-user-select:none; -webkit-user-select:none; user-select:none; z-index: 20;}
+div.widget-task-bar ul{margin-left: 40px; list-style: none;}
+div.widget-task-bar li{
+    float: left;
+    padding: 0px 10px 0px 4px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #000000;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+    color: #ffffff;
+    cursor: default;
+    display: inline-block;
+}
+div.widget-task-bar li:hover{background-color: #3a3d3b;}
+div.widget-task-bar li span.icon{float: left; margin-left: 4px; width: 28px; height: 40px; font-size: 0px; display: inline-block;}
+div.widget-task-bar li span.icon img{max-width: 24px; max-height: 24px; border: none; vertical-align: middle;}
+div.widget-task-bar li span.title{float: left; min-width: 30px; height: 40px; line-height: 40px; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; display: inline-block;}
+
+/* buttons */
+div.button{padding: 20px; text-align: right;}
+div.button button.button{
+    margin-right: 10px;
+    padding: 6px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    color: #666666;
+    text-decoration: none;
+    border-radius: 4px;
+    outline: none;
+    -webkit-user-select: none;
+}
+
+div.button button.ensure {}
+div.button button.ensure {border: 1px solid #d73104; background-color: #d73104; color: #ffffff;}
+div.button button.ensure:hover {border: 1px solid #ff6600; background-color: #ff6600; color: #ffffff;}
+div.button button.cancel:hover {background-color: #efefef;}
+
+div.button button.submit {}
+div.button button.submit {border: 1px solid #d73104; background-color: #d73104; color: #ffffff;}
+div.button button.submit:hover {border: 1px solid #ff6600; background-color: #ff6600; color: #ffffff;}

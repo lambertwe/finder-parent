@@ -1,0 +1,27 @@
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td,a,img{margin: 0px; padding: 0px;}
+html,body,input,button,select,textarea{font-family: Arial, Georgia, Arial, Consolas, Microsoft YaHei; font-size: 13px; word-wrap: break-word; color: #333333;}
+img{border: none; vertical-align: middle;}
+.background{background: url(?action=res&path=/finder/images/7a4f.jpg) center center / cover no-repeat fixed; overflow: hidden;}
+div.apptop{height: 50px; border-bottom: 0px solid #deddd9; background-color: rgba(255, 255, 255, 0.2);}
+div.apptop div.logo{
+    float: left;
+    width: 280px;
+    height: 50px;
+    line-height: 50px;
+    background: transparent url(?action=res&path=/finder/images/logo.png) no-repeat scroll 0px 0px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #5d6a70;
+}
+div.wrap{margin: 0px auto 0px auto; width: 480px;}
+div.login-container{margin-top: 150px;}
+div.login-panel{padding: 30px; border: 0px solid #cacaca; border-radius: 10px; background-color: rgba(255, 255, 255, 0.2);}
+div.login-panel h2{margin: 0px 0px 24px; font-size: 24px; font-weight: 400; text-align: center; color: #f8f8f8;}
+div.login-panel div.row{padding: 6px 0px;}
+div.login-panel div.row input.text{padding: 10px; width: 100%; height: 48px; box-sizing: border-box; border: 1px solid #f1f1f1; border-radius: 10px; outline: none; font-size: 18px; color: #888888;}
+div.login-panel div.row input.button{width: 100%; height: 48px; box-sizing: border-box; border: 1px solid #2dbe60; border-radius: 24px; background-color: #2dbe60; transition: opacity .2s ease; outline: none; font-size: 20px; color: #ffffff;}
+div.login-panel div.row input.button:hover{border: 1px solid #28a955; background-color: #28a955;}
+div.footer{position: absolute; left: 0px; bottom: 0px; width: 100%; z-index: 100;}
+div.footer div.copyright{height: 40px; line-height: 40px; background-color: transparent; font-size: 12px; text-align: center; color: #dddddd;}
+div.footer div.copyright a{text-decoration: none; color: #dddddd;}
+div.footer div.copyright a:hover{text-decoration: underline;}

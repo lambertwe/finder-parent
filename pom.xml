@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<name>finder-web-parent</name>
+	<url>http://www.finderweb.net</url>
+	<groupId>com.skin.finder</groupId>
+	<artifactId>finder-web-parent</artifactId>
+	<version>2.3.3</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+		<maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
+
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+	</properties>
+
+	<modules>
+		<module>finder-web</module>
+		<module>finder-web-app</module>
+		<module>finder-web-boot</module>
+	</modules>
+	<distributionManagement>
+		<repository>
+			<id>crediteyes</id>
+			<url>http://192.168.15.5:8081/nexus/content/repositories/crediteyes</url>
+		</repository>
+		<snapshotRepository>
+			<id>crediteyes-snapshots</id>
+			<url>http://192.168.15.5:8081/nexus/content/repositories/crediteyes-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

@@ -1,0 +1,27 @@
+############################################################
+# admin host
+# 
+# date: yyyy-MM-dd HH:mm:ss
+############################################################
+
+# 请勿手动编辑该文件, 请使用管理员帐号登录后台设置
+# 路径配置遵循ant路径配置规则
+# host@workspace: host必须是localhost, 并且只能是localhost
+# grant show on localhost@@
+# 如果workspace是@表示这是对workspace权限定义
+# 用户只能看到这里定义的workspace
+# workspace定义将忽略exclude选项, 允许使用 *, 表示全部
+# ==========================================================
+# read - 工作空间权限, 配置用户能看到的工作空间。工作空间配置将忽略exclude选项。
+# grant read on localhost@@ {
+#    include server1.log
+#    include server1.mp3
+#    include server1.doc
+#    include server1.bak
+# }
+
+# read - 文件权限, 用户可读该空间除了private目录的所有目录和文件
+# grant read on localhost@server1.log {
+#    include /**
+#    exclude /private/**
+# }

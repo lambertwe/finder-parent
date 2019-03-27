@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Finder - Powered by Finder</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+<script type="text/javascript">
+<!--
+window.onload = function() {
+    var url = null;
+    var requestURI = window.location.pathname;
+
+    if(window.location.href.indexOf("?r=") < 0) {
+        window.location.href = requestURI + "?r=" + new Date().getTime();
+        return;
+    }
+
+    /**
+     * URL: ("", "/", "${contextPath}")
+     */
+    if(requestURI == "") {
+        url = requestURI + "/finder";
+    }
+    else if(requestURI.length > 0 && requestURI.charAt(requestURI.length - 1) == "/") {
+        url = requestURI + "finder";
+    }
+    else {
+        url = requestURI.replace("/index.html", "/finder");
+    }
+
+    try {
+        document.getElementById("index").setAttribute("href", url);
+    }
+    catch(e) {
+    }
+    window.top.location.href = url;
+};
+//-->
+</script>
+</head>
+<body>
+<a id="index" style="display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-decoration: none;" href="javascript:void(0);">
+    <div style="margin: 100px auto 0px auto; width: 100px; color: #c0c0c0;" href="javascript:void(0);">loading...</div>
+</a>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+        http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.skin.finder</groupId>
+        <artifactId>finder-web-parent</artifactId>
+        <version>2.3.3</version>
+    </parent>
+
+    <name>finder-web-app</name>
+    <url>http://www.finderweb.net</url>
+    <artifactId>finder-web-app</artifactId>
+    <packaging>war</packaging>
+
+    <properties> 
+        <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+        <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ss</maven.build.timestamp.format>
+
+        <!-- 编译和依赖都使用低版本的API, 以确保最终编译出来的.jar文件可以运行在低版本的JRE和Tomcat上 -->
+        <java-version>1.8</java-version>
+        <jsp-api-version>2.0</jsp-api-version>
+        <servlet-api-version>2.5</servlet-api-version>
+        <slf4j-version>1.7.2</slf4j-version>
+        <logback-version>1.2.3</logback-version>
+    </properties>
+
+    <build>
+        <finalName>finder-web-${project.parent.version}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>utf-8</encoding>
+                    <compilerArgument>-Xlint:deprecation</compilerArgument>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <warSourceDirectory>webapp</warSourceDirectory>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                        <manifestEntries>
+                            <Manifest-Version>${project.parent.version}</Manifest-Version>
+                            <Developer>http://www.finderweb.net</Developer>
+                            <Build-By>xuesong.net</Build-By>
+                            <Build-Time>${maven.build.timestamp}</Build-Time>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.8.v20171121</version>
+                <configuration>
+                    <!--
+                        http://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html
+                    -->
+                    <webAppSourceDirectory>webapp</webAppSourceDirectory>
+                    <contextPath>/</contextPath>
+                    <!-- automatic manual -->
+                    <reload>manual</reload>
+                    <scanIntervalSeconds>0</scanIntervalSeconds>
+                    <scanTargetPatterns>
+                        <scanTargetPattern>
+                            <directory>webapp/WEB-INF</directory>
+                            <excludes>
+                                <exclude>**/*.jsp</exclude>
+                            </excludes>
+                            <includes>
+                                <include>**/*.properties</include>
+                                <include>**/*.xml</include>
+                            </includes>
+                        </scanTargetPattern>
+                    </scanTargetPatterns>
+                    <connectors>
+                        <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                            <port>8080</port>
+                            <maxIdleTime>60000</maxIdleTime>
+                        </connector>
+                    </connectors>
+                    <webDefaultXml>jetty/webdefault.xml</webDefaultXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!--
+        web项目所使用的所有jar都不依赖 finder-web.jar
+        finder-web.jar也不会提供任何的依赖关系
+    -->
+    <dependencies>
+        <dependency>
+            <groupId>com.skin.finder</groupId>
+            <artifactId>finder-web</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${servlet-api-version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>${logback-version}</version>
+        </dependency>
+    </dependencies>
+</project>

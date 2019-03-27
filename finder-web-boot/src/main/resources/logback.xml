@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <property name="log.home" value="logs"/>
+    <property name="log.bak.home" value="logs"/>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder charset="utf-8">
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36}\(%L\) - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="rootout" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/finder.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.bak.home}/finder.%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36}\(%L\) - %msg%n</Pattern>
+            <charset>utf-8</charset>
+        </encoder>
+    </appender>
+    <appender name="accessAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/finder_access_log.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.bak.home}/finder_access_log.%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <Pattern>%d{HH:mm:ss.SSS} [%thread] - %msg%n</Pattern>
+            <charset>utf-8</charset>
+        </encoder>
+    </appender>
+
+    <root level="DEBUG">
+        <appender-ref ref="rootout"/>
+    </root>
+
+    <logger name="com.skin.finder" level="DEBUG" additivity="false">
+        <appender-ref ref="rootout"/>
+    </logger>
+
+    <logger name="accessLogger" level="DEBUG" additivity="false">
+        <appender-ref ref="accessAppender"/>
+    </logger>
+</configuration>
+

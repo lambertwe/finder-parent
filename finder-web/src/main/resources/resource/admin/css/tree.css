@@ -1,0 +1,19 @@
+div.nav-tree-panel{margin: 0px; padding: 0px; position: absolute; top: 0px; left: 0px; width: 300px; height: 100%; overflow: hidden; z-index: 101;}
+div.nav-tree-panel:hover{overflow: auto;}
+div.htree{width: auto; height: auto; margin: 8px; padding: 0px; white-space: nowrap; font-size: 13px; line-height: 18px; cursor: default; text-align: left; overflow: visible;}
+div.htree div.node{margin: 0px; padding: 5px 0px 5px 0px; height: 18px; font-size: 13px; letter-spacing: -4px; overflow: visible;}
+div.node span, div.node a{margin: 0px; padding: 0px; line-height: 18px; font-size: 13px; letter-spacing: 0px;}
+div.node input{margin: 0px; padding: 0px; margin-top: -3px;}
+div.node a:link{color: #1f3a87; text-decoration: none;}
+div.node a:visited{color: #1f3a87; text-decoration: none;}
+div.node a:hover{text-decoration: underline; color: #bc2931;}
+div.node img{margin: 0px; padding: 0px; border: 0px solid #ffffff; vertical-align: middle;}
+div.node:hover{background-color: #efefef;}
+div.node.clicked{background-color: #e4edf8;}
+div.node.clicked a{color: #bc2931;}
+
+div.hide{display: none;}
+div.show{margin: 0px; display: block; overflow: visible;}
+div.htree div.mouseout{background-color: #ffffff;}
+div.htree div.mouseover{background-color: #d6e6f6;}
+div.htree div.mouseclick{background-color: #d6e6f6;}

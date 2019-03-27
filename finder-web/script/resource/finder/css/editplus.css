@@ -1,0 +1,141 @@
+body{margin: 0px; padding: 0px; overflow: hidden;}
+
+/* message-view */
+div.message-panel{margin: 10% auto 0px auto; width: 300px; font-size: 14px; color: #666666;}
+div.message-panel h1{margin: 10px 0px;}
+
+/* menu-bar */
+div.menu-bar{margin: 0px; padding: 2px 0px; width: 100%; height: 24px; border-bottom: 1px solid #dddddd; background-color: #f8f8f8;}
+div.menu-bar div.menu-line{float: left; margin: 4px 4px; height: 16px; border-left: 1px solid #888888; font-size: 0px;}
+div.menu-bar div.menu-item{float: left; margin: 0px; padding: 0px 10px; height: 24px; line-height: 24px; font-size: 13px; text-align: center; cursor: default;}
+div.menu-bar div.menu-item:hover{background-color: #dddddd;}
+div.menu-bar div.menu-item.selected{background-color: #dddddd;}
+div.menu-bar div.menu-item.disabled{color: #888888; background-color: #f8f8f8;}
+div.menu-bar div.menu-item.disabled:hover{background-color: #f8f8f8;}
+
+div.tab-bar{width: 100%; height: 24px; border-top: 1px solid #666666; background-color: #333333;}
+div.tab-bar div.tab-line{float: left; margin: 4px 4px; height: 16px; border-left: 1px solid #666666; font-size: 0px;}
+div.tab-bar div.tab-menu{float: left; width: 30px; height: 24px;}
+div.tab-bar div.tab-label{float: left; margin: 0px; padding: 0px 16px; height: 24px; line-height: 24px; border-right: 1px solid #3f3f3f; background-color: #333333; font-size: 13px; text-align: center; color: #eeeeee; cursor: default;}
+div.tab-bar div.tab-label:hover{background-color: #666666;}
+
+div.tab-panel-wrap{overflow: hidden;}
+div.tab-label-wrap{padding-top: 0px; padding-left: 10px; height: 28px; background-color: #333333; overflow: hidden;}
+div.tab-label-wrap ul{margin: 0px; padding: 0px;}
+div.tab-label-wrap ul li.tab-label{
+    float: left;
+    margin: 0px;
+    height: 28px;
+    line-height: 28px;
+    outline: medium none;
+    border-left: 1px solid #3f3f3f;
+    background-color: #333333;
+    font-size: 12px;
+    text-decoration: none;
+    color: #eeeeee;
+    cursor: default;
+    display: inline-block;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+}
+/* ff6a00 */
+div.tab-label-wrap ul li.tab-label:hover{background-color: #666666;}
+div.tab-label-wrap ul li.tab-active{background-color: #666666; color: #eeeeee;}
+div.tab-label-wrap ul li.tab-active:hover{background-color: #666666; color: #eeeeee;}
+
+div.tab-label-wrap ul li.tab-label span.icon{margin-left: 4px; width: 16px; height: 16px;}
+div.tab-label-wrap ul li.tab-label span.label{padding-left: 16px; padding-right: 16px;}
+div.tab-label-wrap ul li.tab-label span.close{
+    float: right;
+    margin-top: 7px;
+    margin-left: 0px;
+    margin-right: 4px;
+    width: 15px;
+    height: 15px;
+    background: transparent url(?action=res&path=/finder/images/tab-close.gif) no-repeat -15px 0px;
+}
+div.tab-label-wrap ul li.tab-active span.close{background-position: 0px 0px;}
+div.tab-label-wrap ul li.tab-label:hover span.close{background-position: 0px 0px;}
+div.tab-label-wrap span.add{margin-top: 4px; margin-left: 4px; display: inline-block; width: 18px; height: 18px; background: transparent url(?action=res&path=/finder/images/add.gif) no-repeat 0px 0px;}
+div.tab-label-wrap span.add:hover{background-position: -18px; 0px}
+div.tab-panel{clear: both; width: 100%; height: 100%; display: none;}
+
+/* */
+div.widget-mask{position: absolute; top: 29px; left: 0px; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.01); z-index: 1001; display: none;}
+
+/* #9cb8e1 */
+div.contextmenu{
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    border: 1px solid #dfdfdf;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.15);
+    background: #ffffff url(?action=res&path=/finder/images/menu-item.gif) repeat-y scroll 0px 0px;
+    overflow: hidden;
+    z-index: 1000;
+    display: none;
+}
+div.contextmenu div.scroll-up{position: absolute; top: 0px; left: 2px; width: 220px; height: 24px; line-height: 24px; background-color: rgba(255, 255, 255, 1.0); font-size: 0px; text-align: center;}
+div.contextmenu div.scroll-down{position: absolute; bottom: 0px; left: 2px; width: 220px; height: 24px; line-height: 24px; background-color: rgba(255, 255, 255, 1.0); font-size: 0px; text-align: center;}
+div.contextmenu div.scroll-up:hover{background: transparent url(?action=res&path=/finder/images/item-over.gif) repeat-y scroll 0px 0px;}
+div.contextmenu div.scroll-down:hover{background: transparent url(?action=res&path=/finder/images/item-over.gif) repeat-y scroll 0px 0px;}
+
+div.contextmenu div.scroll-up img{border: none; vertical-align: middle;}
+div.contextmenu div.scroll-down img{border: none; vertical-align: middle;}
+
+div.contextmenu ul.menu{
+    margin: 0px;
+    padding: 0px;
+    width: 224px;
+    list-style: none;
+    overflow: hidden;
+}
+div.contextmenu ul.menu li.line{margin: 1px 0px 1px 44px; padding: 0px; width: 204px; height: 0px; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #ffffff;}
+div.contextmenu ul.menu li.item{
+    margin: 2px;
+    width: 220px;
+    height: 24px;
+    line-height: 24px;
+    border: 0px solid #aecff7;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #000000;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;
+}
+div.contextmenu ul.menu li:hover{background: transparent url(?action=res&path=/finder/images/item-over.gif) repeat-y scroll 0px 0px;}
+div.contextmenu ul.menu li.disabled{color: #cccccc; opacity: 0.5; filter: alpha(opacity=50);}
+div.contextmenu ul.menu li.selected{background: transparent url(?action=res&path=/finder/images/item-over.gif) repeat-y scroll 0px 0px;}
+div.contextmenu ul.menu li.disabled:hover{background: none;}
+div.contextmenu ul.menu li.item span.icon{
+    float: left;
+    padding-left: 16px;
+    width: 32px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 0px;
+    text-align: left;
+    display: inline-block;
+}
+div.contextmenu ul.menu li.checked span.icon{background: transparent url(?action=res&path=/finder/images/checked.png) no-repeat 12px 5px;}
+div.contextmenu ul.menu li.item span.icon img{border: none; vertical-align: middle;}
+div.contextmenu ul.menu li.item a.command{
+    padding: 0px;
+    width: 150px;
+    height: 26px;
+    line-height: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    cursor: default;
+}
+div.contextmenu ul.menu li.item a{text-decoration: none; color: #000000;}
+div.contextmenu ul.menu li.disabled a{text-decoration: none; color: #6d6d6d;}
+/* contextmenu end */
