@@ -32,9 +32,9 @@
 
 		<directory>target</directory>
 		<sourceDirectory>src/main/java</sourceDirectory>
-		<testSourceDirectory>src/test/java,src/example/java</testSourceDirectory>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
 		<outputDirectory>target/classes</outputDirectory>
-		<testOutputDirectory>target/classes</testOutputDirectory>
+		<testOutputDirectory>target/test-classes</testOutputDirectory>
 
 		<plugins>
 			<plugin>
